@@ -8,9 +8,9 @@ spring:
     config:
       server:
         git: #配置存储配置信息的Git仓库
-          uri: https://gitee.com/macrozheng/springcloud-config.git
-          username: macro
-          password: 123456
+          uri: https://github.com/tianandli/config.git
+          username: tianandli
+          password: 1202xiaoyun615
           clone-on-start: true #开启启动时直接从git获取配置
 eureka:
   client:
