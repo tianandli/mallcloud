@@ -1,0 +1,21 @@
+
+server:
+  port: 8401
+spring:
+  application:
+    name: hystrix-service
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8001/eureka/
+service-url:
+  user-service: http://user-service
+
+#后边在学习hystrix-dashbard的时候，hystrix-dashbard会监控hystrix.stream这个端点，所以做了下面的配置
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'hystrix.stream' #暴露hystrix监控端点

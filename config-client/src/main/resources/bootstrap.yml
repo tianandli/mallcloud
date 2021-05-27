@@ -1,0 +1,21 @@
+#资料地址：https://www:cnblogs:com/BlogNetSpace/p/8469033:html
+#Config-Client的配置文件不要写在application.yml文件中，而是新建一个bootstrap.yml文件，在这里面写配置.
+#bootstrap.yml（bootstrap.properties）用来在程序引导时执行，应用于更加早期配置信息读取，如可以使用来配置application.yml中使用到参数等
+#application.yml（application.properties) 应用程序特有配置信息，可以用来配置后续各个模块中需使用的公共参数等。
+#bootstrap.yml 先于 application.yml 加载server
+
+server:
+  port: 9001
+spring:
+  application:
+    name: config-client
+  cloud:
+    config: #Config客户端配置
+      profile: dev #启用配置后缀名称
+      label: dev #分支名称
+      uri: http://localhost:8901 #配置中心地址
+      name: config #配置文件名称
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8001/eureka/

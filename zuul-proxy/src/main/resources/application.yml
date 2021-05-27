@@ -1,0 +1,30 @@
+
+server:
+  port: 8801
+spring:
+  application:
+    name: zuul-proxy
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8001/eureka/
+#与/userService/**匹配的请求路由到user-service这个微服务上去，与/feignService/**匹配的请求路由到feign-service这个微服务上去。
+zuul:
+  prefix: /proxy #给网关路由添加前缀
+  routes: #给服务配置路由
+    user-service: #微服务的名字
+      path: /userService/** #相匹配的请求路径
+    feign-service: #微服务的名字
+      path: /feignService/** #相匹配的请求路径
+  PreLogFilter:
+    pre:
+      disable: false #控制是否启用前置过滤器，true禁用；false启用
+#开启查看路由的端点。在浏览器访问http://localhost:8801/actuator/routes就可以看到节点信息。
+#访问http://localhost:8801/actuator/routes/details查看具体的节点信息
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'routes'
