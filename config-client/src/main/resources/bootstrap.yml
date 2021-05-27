@@ -11,11 +11,16 @@ spring:
     name: config-client
   cloud:
     config: #Config客户端配置
-      profile: dev #启用配置后缀名称
-      label: main #分支名称
+      profile: dev #启用配置后缀名称,github上面现在配置了config-dev.yml,config-test.yml,config-prod.yml三个，
+      label: main #分支名称,我的分支叫main,这里不是master
       uri: http://localhost:8901 #配置中心地址
       name: config #配置文件名称
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8001/eureka/
+management: #开启refresh端点来刷新客户端配置信息
+  endpoints:
+    web:
+      exposure:
+        include: 'refresh'
