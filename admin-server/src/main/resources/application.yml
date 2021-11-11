@@ -3,3 +3,9 @@ spring:
     name: admin-server
 server:
   port: 9301
+eureka:
+  client:
+    register-with-eureka: true #这里只需要将admin-server和eureka整合即可，admin-server 会自动从注册中心获取服务列表，然后挨个获取监控信息
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8001/eureka/ #将本服务注册进eureka
