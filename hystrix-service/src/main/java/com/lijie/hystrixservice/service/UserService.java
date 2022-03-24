@@ -40,7 +40,7 @@ public class UserService {
      * 8201里面，因为8201手动停止了，下面的方法配置了一个fallbackMethod = "getDefaultUser"，所以会调用下面的
      * getDefaultUser方法，返回里面的值
      *
-     * @HystrixCommand中的常用参数 ：
+     * @HystrixCommand中的常用参数：
      * fallbackMethod：指定服务降级处理方法；
      * ignoreExceptions：忽略某些异常，不发生服务降级；
      * commandKey：命令名称，用于区分不同的命令；
