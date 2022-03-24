@@ -39,6 +39,13 @@ public class UserService {
      * 两次调用http://localhost:8401/hystrixUser/testFallback/1，发现一次会调到8202里面正常的返回值，一次会调到
      * 8201里面，因为8201手动停止了，下面的方法配置了一个fallbackMethod = "getDefaultUser"，所以会调用下面的
      * getDefaultUser方法，返回里面的值
+     *
+     * @HystrixCommand中的常用参数：
+     * fallbackMethod：指定服务降级处理方法；
+     * ignoreExceptions：忽略某些异常，不发生服务降级；
+     * commandKey：命令名称，用于区分不同的命令；
+     * groupKey：分组名称，Hystrix会根据不同的分组来统计命令的告警及仪表盘信息；
+     * threadPoolKey：线程池名称，用于划分线程池。
      */
     @HystrixCommand(fallbackMethod = "getDefaultUser")
     public CommonResult getUser(Long id) {
