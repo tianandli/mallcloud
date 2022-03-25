@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="oauth2-client-dandiandenglu" />
+        <module name="config-server" />
+        <module name="config-client" />
+        <module name="user-service" />
+        <module name="admin-server-security" />
+        <module name="hystrix-service" />
+        <module name="zuul-proxy" />
+        <module name="mallcloud" />
+        <module name="api-gateway" />
+        <module name="eureka-client" />
+        <module name="oauth2-server-dandiandenglu" />
+        <module name="admin-server" />
+        <module name="feign-service" />
+        <module name="oauth2-server-jwt" />
+        <module name="ribbon-service" />
+        <module name="eureka-server" />
+        <module name="hystrix-dashboard" />
+        <module name="oauth2-server" />
+        <module name="admin-client" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="admin-client" target="1.8" />
+      <module name="admin-server" target="1.8" />
+      <module name="admin-server-security" target="1.8" />
+      <module name="api-gateway" target="1.8" />
+      <module name="config-client" target="1.8" />
+      <module name="config-security-server" target="1.8" />
+      <module name="config-server" target="1.8" />
+      <module name="eureka-client" target="1.8" />
+      <module name="eureka-security-server" target="1.8" />
+      <module name="eureka-server" target="1.8" />
+      <module name="feign-service" target="1.8" />
+      <module name="hystrix-dashboard" target="1.8" />
+      <module name="hystrix-service" target="1.8" />
+      <module name="mallcloud" target="1.8" />
+      <module name="oauth2-client-dandiandenglu" target="1.8" />
+      <module name="oauth2-server" target="1.8" />
+      <module name="oauth2-server-dandiandenglu" target="1.8" />
+      <module name="oauth2-server-jwt" target="1.8" />
+      <module name="ribbon-service" target="1.8" />
+      <module name="user-service" target="1.8" />
+      <module name="zuul-proxy" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="admin-client" options="-parameters" />
+      <module name="admin-server" options="-parameters" />
+      <module name="admin-server-security" options="-parameters" />
+      <module name="api-gateway" options="-parameters" />
+      <module name="config-client" options="-parameters" />
+      <module name="config-security-server" options="-parameters" />
+      <module name="config-server" options="-parameters" />
+      <module name="eureka-client" options="-parameters" />
+      <module name="eureka-security-server" options="-parameters" />
+      <module name="eureka-server" options="-parameters" />
+      <module name="feign-service" options="-parameters" />
+      <module name="hystrix-dashboard" options="-parameters" />
+      <module name="hystrix-service" options="-parameters" />
+      <module name="mallcloud" options="-parameters" />
+      <module name="oauth2-client-dandiandenglu" options="-parameters" />
+      <module name="oauth2-server" options="-parameters" />
+      <module name="oauth2-server-dandiandenglu" options="-parameters" />
+      <module name="oauth2-server-jwt" options="-parameters" />
+      <module name="ribbon-service" options="-parameters" />
+      <module name="user-service" options="-parameters" />
+      <module name="zuul-proxy" options="-parameters" />
+    </option>
+  </component>
+</project>
